@@ -1,0 +1,22 @@
+<view class="top_nav">
+  <view class="nav_item" bindtap="showClass">分类</view>
+  <view class="nav_item" bindtap="showRank">排行</view>
+</view>
+<!-- 分类部分呈现的数据 -->
+<view wx:if="{{status === 1}}"> 
+  <view class="class_title_style">男生</view>
+  <classification _class="{{class_male}}" name="{{'male'}}"></classification>
+  <view class="class_title_style">女生</view>
+  <classification _class="{{class_female}}" name="{{'female'}}"></classification>
+  <view class="class_title_style">出版</view>
+  <classification _class="{{class_press}}" name="{{'press'}}"></classification>
+</view>
+<!-- 排行部分呈现的数据 -->
+<view wx:if="{{status === 2}}"> 
+  <view class="class_title_style">男生</view>
+  <rank _rank = "{{rank_male}}" gender = "male"></rank>  
+  <view class="class_title_style" >女生</view>
+  <rank _rank = "{{rank_female}}" gender = "female"></rank>  
+  <view class="class_title_style">出版</view>
+  <rank _rank = "{{rank_picture}}" gender = "picture"></rank>  
+</view>

@@ -1,0 +1,19 @@
+/* pages/help/help.wxss */
+.help_statement{
+  padding: 0 35rpx;
+}
+.header{
+  font-weight: bold;
+  font-size:42rpx;
+}
+.title{
+  font-size:32rpx;
+  color: #666;
+  line-height: 90rpx;
+}
+.text{
+  font-size:30rpx;
+  color: #999;
+  line-height: 60rpx;
+  text-indent: 2em;
+}

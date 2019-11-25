@@ -1,0 +1,49 @@
+.rank_type{
+  display: flex;
+  justify-content: space-around;
+  height:80rpx;
+  line-height:80rpx;
+  background: #eee;
+}
+.red{
+  color: red;
+  border-bottom: 4rpx solid red;
+}
+.rank-item{
+  
+}
+.rank-content{
+  width: 100vw;
+  font-size: 24rpx;
+  text-align: left;
+} 
+.rank-item-image{
+  width: 200rpx;
+  height: 290rpx;
+}
+.detail{
+  margin-left: 20rpx;
+  color:#999;
+}
+.rank-item{
+  display: flex;
+  border-bottom: 1rpx solid #eee;
+  margin: 0 40rpx;
+  padding: 20rpx 0;
+}
+.name{
+  line-height: 40rpx;
+  font-weight: bold;
+  font-size:30rpx;
+  color:#3a3a3a;
+}
+.author{
+  line-height: 60rpx;
+   font-size:24rpx;
+}
+.shortIntro{
+   line-height: 40rpx;
+   height: 120rpx;
+   overflow: hidden;
+   font-size:24rpx;
+}

@@ -1,0 +1,20 @@
+/* components/classification/classification.wxss */
+.class-box{
+  display: flex;
+  flex-wrap: wrap;
+}
+._class-item{
+  width: 33.33333%;
+  text-align: center;
+  outline: 1rpx solid #eee;
+  padding: 20rpx 0;
+}
+.name-style{
+  font-weight: bold;
+  font-size: 30rpx;
+  color: #3a3a3a;
+}
+.count-style{
+  color: #ccc;
+  font-size:26rpx;
+}

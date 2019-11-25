@@ -1,0 +1,5 @@
+<!--pages/first-page/first-page.wxml-->
+<!-- <text>pages/first-page/first-page.wxml</text>
+<button bindtap="goToDetail">点击进入详情页</button>
+<view>{{num}}</view>
+<button bindtap="goToMy">点击我跳转到个人中心</button> -->

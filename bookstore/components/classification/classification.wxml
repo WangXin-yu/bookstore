@@ -1,0 +1,10 @@
+<view class="class-box">  
+  <view wx:for="{{_class}}"  wx:key="index" class="_class-item" bindtap="goToClassDetail" data-gender="{{name}}" data-type="{{item.name}}" data-index="{{index}}">
+    <view class="name-style">
+      {{item.name}}
+    </view>
+    <view class="count-style">
+      {{item.bookCount}}本
+    </view>
+  </view>
+</view>

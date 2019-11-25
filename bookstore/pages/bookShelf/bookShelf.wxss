@@ -1,0 +1,65 @@
+/* pages/bookShelf/bookShelf.wxss */
+.top_modihelpref_icon{
+  margin: 0 40rpx;
+  padding-top: 40rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.top_image_icon{
+  width: 60rpx;
+  height: 60rpx;
+}
+.help_and_ref{
+  display: flex;
+}
+.help{
+  font-size:32rpx;
+  color: #666;
+  border: 1px solid #666;
+  width:100rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 20rpx;
+  margin-right: 40rpx;
+}
+.advice{
+  text-align: center;
+  font-size:30rpx;
+  color: #3a3a3a;
+  margin-top: 100rpx;
+}
+.shelf-item{
+    width: 200rpx;
+}
+.book-image{
+  width: 200rpx;
+  height: 290rpx;
+}
+.book-shelf{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  font-size:24rpx;
+  padding-left: 35rpx;
+  padding-right: 0;
+  box-sizing: border-box;
+}
+.title{
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.read{
+  font-size:26rpx;
+  color: #999;
+}
+.shelf-item{ 
+  margin-top: 30rpx;
+  margin-right: 40rpx;
+}
+.shelf-item:nth-child(3n){
+  margin-right: 0;
+}

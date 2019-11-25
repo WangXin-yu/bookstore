@@ -1,0 +1,11 @@
+<view class="reading-interface">
+  <view class="title">{{current_chapter_content.title}}</view>
+  <view class="content">
+    {{current_chapter_content.cpContent}}
+  </view>
+  <view class="toggle-chapter">
+    <view class="last-chapter" bindtap="goToLastChapter">上一章</view>
+    <view class="line"></view>
+    <view class="next-chapter" bindtap="goToNextChapter">下一章</view>
+  </view>
+</view>

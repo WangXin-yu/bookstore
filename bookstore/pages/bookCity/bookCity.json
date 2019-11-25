@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "classification": "../../components/classification/classification",
+    "rank" : "../../components/rank/rank"
+  }
+}

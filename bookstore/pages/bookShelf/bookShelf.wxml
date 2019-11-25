@@ -1,0 +1,18 @@
+<!--pages/bookShelf/bookShelf.wxml-->
+<view class="top_modihelpref_icon" >
+  <view><image src = "/images/modify.png" class="top_image_icon"></image></view>
+  <view class="help_and_ref">
+    <view class="help" bindtap="goToHelp">帮助</view>
+    <view><image src = "/images/refresh.png" class="top_image_icon"></image></view>
+  </view>
+</view>
+<view class="advice" wx:if="{{getStorageShelfArray.length <= 0}}">
+  主人还没有收藏书籍奥，快去书城收藏吧！
+</view>
+<view wx:else class="book-shelf">
+  <view wx:for="{{shelf_array}}" wx:key="{{index.id}}" class="shelf-item" bindtap="goToBookDetail" data-_id="{{item._id}}">
+    <image src="https://statics.zhuishushenqi.com{{item.cover}}" class="book-image"></image>
+    <view class="title">{{item.title}}</view>  
+    <view class="read">读到第{{1}}章</view>
+  </view>
+</view>

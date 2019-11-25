@@ -1,0 +1,12 @@
+.rank-item{
+  display: flex;
+  margin: 10rpx 0 10rpx 40rpx;
+  font-size:30rpx;
+  line-height: 50rpx;
+  border-bottom: 1px solid #eee;
+}
+.rank-icon{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+}

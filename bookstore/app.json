@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/bookShelf/bookShelf",
+    "pages/bookCity/bookCity",
+    "pages/search/search",
+    "pages/help/help",
+    "pages/classDetail/classDetail",
+    "pages/bookDetail/bookDetail",
+    "pages/readingInterface/readingInterface",
+    "pages/rank/rank"
+  ],
+  "tabBar": {
+    "selectedColor": "#FF0000",
+    "list": [{
+      "pagePath" : "pages/bookShelf/bookShelf",
+      "text" : "书架",
+      "iconPath" : "images/bookshelf_icon.png",
+      "selectedIconPath" : "images/bookshelf_clicked_icon.png"
+    },{
+      "pagePath" : "pages/bookCity/bookCity",
+      "text" : "书城",
+      "iconPath": "images/book_city_icon.png",
+      "selectedIconPath": "images/book_city_clicked_icon.png"
+    },{
+      "pagePath" : "pages/search/search",
+      "text" : "搜索",
+      "iconPath": "images/search_icon.png",
+      "selectedIconPath": "images/search_clicked_icon.png"
+    }]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#cb1c36",
+    "navigationBarTitleText": "豆瓣书城",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+  
+}

@@ -1,0 +1,33 @@
+  <!-- 头部导航 -->
+<view  class="top-nav"> 
+  <view wx:for="{{typeList}}" wx:key="index" class="top-nav-item {{index === type_index ? 'red_font_color' : ''}}" bindtap="clickTopTypeToChangeBooks" data-type="{{index}}" >
+    {{item.name}}
+  </view>
+</view>
+<!-- 头部分类导航 -->
+<scroll-view class="top-class-nav" scroll-x="true">
+  <view wx:for="{{topClassArray}}"  wx:key="index" class="top-class-nav-item {{index === minor_index ?        'red_font_color' : ''}}"
+bindtap="clickTopClassToChangeBooks" data-minor_index="{{index}}" data-minor="{{item}}">
+    {{item}}
+  </view>
+</scroll-view> 
+<!-- 图书列表展示数据 -->
+
+<view>
+  <view wx:for="{{books}}" wx:key="index" class="book-item" bindtap="goToBookDetail" data-_id = "{{item._id}}">
+    <view>
+      <image class="book-image" src="https://statics.zhuishushenqi.com{{item.cover}}"></image>
+    </view>
+    <view>
+      <view class="book-name">{{item.title}}</view>
+      <view class="author">{{item.author}}</view>
+      <view class="shortIntro">{{item.shortIntro}}</view>
+      <view class="tags-box">
+        <view wx:for="{{item.tags}}" class="tags-item {{tag_index === 0 ? 'tags_bg_yellow' : ''}}  {{tag_index === 1 ? 'tags_bg_blue' : ''}}  {{tag_index === 2 ? 'tags_bg_orange' : ''}}" wx:for-item="tag_item" wx:for-index="tag_index" wx:key="{{tag_index.id}}">
+          {{tag_item}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+

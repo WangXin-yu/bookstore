@@ -1,0 +1,35 @@
+<view class="input-box">
+  <view>
+    <image src="../../images/search_input_icon.png" class="search_icon"></image>
+  </view>
+  <input class="search-input" placeholder="请输入书名或作者名" bindblur="searchBookInput"></input>
+</view>
+<!-- 如果搜索出来的书籍的数量 <= 0 那么展示推荐的内容> -->
+<view wx:if="{{search_books.length <= 0}}">
+  <view class="recommand-box">
+    <view>大家都在搜</view>
+    <view class="refresh-box" bindtap="getSixHotWords">
+      <image src="../../images/refresh_recommand.png" class="refresh_icon"></image>
+      <view>换一换</view>
+    </view>
+  </view>
+  <view class="rand_hotwords_box" >
+    <view class="rand_hotwords {{index===0?'bg1':''}} {{index===1?'bg2':''}} {{index===2?'bg3':''}} {{index===3?'bg4':''}} {{index===4?'bg5':''}} {{index===5?'bg6':''}} " wx:for="{{rand_hotwords}}" wx:key="{{index.id}}" bindtap="goToBookDetail" data-_id="{{item.book}}">
+      {{item.word}}
+    </view>
+  </view>
+</view>
+<view wx:else class="search-book-box">
+  <view wx:for="{{search_books}}" wx:key="{{index.id}}" class="search-book-item" bindtap="goToBookDetail" data-_id="{{item._id}}">
+    <view>
+      <image src="https://statics.zhuishushenqi.com{{item.cover}}" class="search-book-image"></image>
+    </view>
+    <view class="right-detail">
+      <view class="title">{{item.title}}</view>
+      <view class="author">{{item.author}}</view>
+      <view class="shortIntro">{{item.shortIntro}}</view>
+      <view class="latelyFollower">最近收藏:{{item.latelyFollower}}</view>
+    </view>
+  </view>
+</view>
+

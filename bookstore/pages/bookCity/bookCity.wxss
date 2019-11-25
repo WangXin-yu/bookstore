@@ -1,0 +1,17 @@
+.top_nav{
+  display: flex;
+  background: #f7f7f7;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.nav_item{
+  width: 50%;
+  text-align: center;
+  color: #3a3a3a;
+}
+.class_title_style{
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 40rpx;
+  color: #999;
+}

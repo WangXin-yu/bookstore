@@ -1,0 +1,56 @@
+<view class="rank_type" wx:if="{{exit_rank_type}}">
+  <view class="{{rank_type == 0 ? 'red' : ''}}" bindtap="rankToggle" data-type="0">周榜</view>
+  <view class="{{rank_type == 1 ? 'red' : ''}}" bindtap="rankToggle" data-type="1">月榜</view>
+  <view class="{{rank_type == 2 ? 'red' : ''}}" bindtap="rankToggle" data-type="2">总榜</view>
+</view>
+
+<view>
+  <!--显示周榜  -->
+  <view class="week_rank" wx:if="{{rank_type == 0}}">
+    <view wx:for="{{week_rank_arr}}" class="rank-item" wx:key="{{index.id}}">
+      <view>
+        <image src="https://statics.zhuishushenqi.com{{item.cover}}" class="rank-item-image"></image>
+      </view>
+      <view class="detail">
+        <view class="name">{{item.title}}</view>
+        <view class="author">{{item.author}}</view>
+        <view class="shortIntro">{{item.shortIntro}}</view>
+      </view>
+
+    </view>
+  </view>
+</view>
+
+<view>
+  <!--显示月榜  -->
+  <view class="week_rank" wx:if="{{rank_type == 1 && exit_rank_type}}">
+    <view wx:for="{{month_rank_arr}}" class="rank-item" wx:key="{{index.id}}">
+      <view>
+        <image src="https://statics.zhuishushenqi.com{{item.cover}}" class="rank-item-image"></image>
+      </view>
+      <view class="detail">
+        <view class="name">{{item.title}}</view>
+        <view class="author">{{item.author}}</view>
+        <view class="shortIntro">{{item.shortIntro}}</view>
+      </view>
+
+    </view>
+  </view>
+</view>
+
+<view>
+  <!--显示总榜  -->
+  <view class="week_rank" wx:if="{{rank_type == 2 && exit_rank_type}}">
+    <view wx:for="{{total_rank_arr}}" class="rank-item" wx:key="{{index.id}}">
+      <view>
+        <image src="https://statics.zhuishushenqi.com{{item.cover}}" class="rank-item-image"></image>
+      </view>
+      <view class="detail">
+        <view class="name">{{item.title}}</view>
+        <view class="author">{{item.author}}</view>
+        <view class="shortIntro">{{item.shortIntro}}</view>
+      </view>
+
+    </view>
+  </view>
+</view>

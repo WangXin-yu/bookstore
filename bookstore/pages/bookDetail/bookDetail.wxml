@@ -1,0 +1,83 @@
+<view class="book-info">
+  <!-- 封面 -->
+  <view class="top-image-bg">
+
+  </view>
+  <view class="top-image-box">
+    <image src="https://statics.zhuishushenqi.com{{book_data.cover}}" class="top-image">
+    </image>
+  </view>
+  <view class="book-name">
+    {{book_data.title}}
+  </view>
+  <view class="book-author">
+    {{book_data.author}}
+  </view>
+  <view class="middle-box">
+    <!-- 中间的开始阅读和加入书架按钮 -->
+    <view class="middle-btn-box">
+      <view class="read-btn btn" bindtap="goToReadingInterface" data-source_id="{{book_source_id}}">开始阅读</view>
+      <view class="join-btn btn" bindtap="addToBookShelf">加入书架</view>
+    </view>
+    <!-- 星级 -->
+    <view class="star-level">
+      <view wx:for="{{rating}}" wx:key="item">
+        <image src="../../images/get_stars.png" class="star"></image>
+      </view>
+      <view wx:for="{{5-rating}}" wx:key="item">
+        <image src="../../images/lost_stars.png" class="star"></image>
+      </view>
+    </view>
+    <!-- 更新到第几章 -->
+    <view class="last-chapter-box">
+      更新至
+      <view class="last-chapter">{{book_data.lastChapter}}</view>
+    </view>
+  </view>
+</view>
+<view class="detail-and-comment-box">
+  <view class="detail-and-comment-pannel">
+    <view class="toggle-box">
+      <view class="detail-toggle {{toggle === 'detail' ? 'red': ''}}" bindtap="toggleEvent" data-toggle="detail">详情</view>
+      <view class="comment-toggle  {{toggle !== 'detail' ? 'red': ''}}"  bindtap="toggleEvent" data-toggle="comment">评价({{book_comment_data.length}})</view>
+    </view>
+    <view wx:if="{{toggle === 'detail'}}" class="detail-box">
+      <view>简介：{{book_data.longIntro}}</view>
+      <view class="catalog">
+        <view><image src="../../images/catalog.png" class="catalog-icon"></image></view>
+        <view>总目录({{book_data.chaptersCount}})章</view>
+      </view>
+      <view>
+        <view class="change-recommend">
+          <view>看过这本书的还在看</view>
+          <view class="right">
+            <view bindtap="changeRecommand">
+              <image src="../../images/refresh_recommand.png" class="refresh-icon"></image>
+            </view>
+            <view>
+             换一换
+            </view>
+          </view>
+        </view>
+        <view class="recommand-box">
+          <view wx:for="{{book_recommand_show}}" wx:key="index" >
+            <image src="https://statics.zhuishushenqi.com{{item.cover}}" class="recommand-item"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view wx:else class="comment-box">
+        <view wx:for="{{book_comment_data}}" wx:key="{{index}}" class="comment-item">
+          <view><image src="https://statics.zhuishushenqi.com{{item.author.avatar}}" class="avator"></image></view>
+          <view>
+            <view class="comment-author">{{item.author.nickname}}</view>
+            <view class="comment-content">{{item.content}}</view> 
+          </view>
+        </view>
+      </view>
+    </view>
+</view>
+<view class="footer">
+
+</view>
